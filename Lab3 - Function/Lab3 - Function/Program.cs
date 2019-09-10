@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Lab3___Function
 {
     // Nils Lundell och Sofia Lindgren
+    // 2821km
     class Program
     {
         static string startLocation;
@@ -30,7 +31,7 @@ namespace Lab3___Function
 
                     Console.WriteLine("Select a service:");
                     Console.WriteLine("[1] GetDistanceKilometers(); //double version");
-                    Console.WriteLine("[2] FindRoute();");
+                    Console.WriteLine("[2] GetDistanceKilometers(); //array version" );
                     Console.WriteLine("[3] GetDistanceKilometers(); //string version");
                     Console.WriteLine("[0] EXIT");
                     int menu = int.Parse(Console.ReadLine());   
