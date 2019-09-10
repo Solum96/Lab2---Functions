@@ -66,7 +66,7 @@ namespace Lab3___Function
             Console.WriteLine("Tryck på valrfi knapp för att mäta avståndet.");
             Console.ReadKey();
             double distance = GetDistanceKilometers(startLatitude, endLatitude, startLongitude, endLongitude);
-            Console.WriteLine(distance);
+            Console.WriteLine("Distance is " + distance + "km");
             Console.ReadKey();
         }
 

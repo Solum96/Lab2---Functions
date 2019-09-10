@@ -5,3 +5,10 @@ C:\Users\nilss\Source\Repos\Lab3 - Function\Lab3 - Function\obj\Debug\Lab3 - Fun
 C:\Users\nilss\Source\Repos\Lab3 - Function\Lab3 - Function\obj\Debug\Lab3 - Function.csproj.CoreCompileInputs.cache
 C:\Users\nilss\Source\Repos\Lab3 - Function\Lab3 - Function\obj\Debug\Lab3 - Function.exe
 C:\Users\nilss\Source\Repos\Lab3 - Function\Lab3 - Function\obj\Debug\Lab3 - Function.pdb
+C:\Users\nilss\Documents\Lab2---Functions\Lab3 - Function\Lab3 - Function\bin\Debug\Lab3 - Function.exe.config
+C:\Users\nilss\Documents\Lab2---Functions\Lab3 - Function\Lab3 - Function\bin\Debug\Lab3 - Function.exe
+C:\Users\nilss\Documents\Lab2---Functions\Lab3 - Function\Lab3 - Function\bin\Debug\Lab3 - Function.pdb
+C:\Users\nilss\Documents\Lab2---Functions\Lab3 - Function\Lab3 - Function\obj\Debug\Lab3 - Function.csprojAssemblyReference.cache
+C:\Users\nilss\Documents\Lab2---Functions\Lab3 - Function\Lab3 - Function\obj\Debug\Lab3 - Function.csproj.CoreCompileInputs.cache
+C:\Users\nilss\Documents\Lab2---Functions\Lab3 - Function\Lab3 - Function\obj\Debug\Lab3 - Function.exe
+C:\Users\nilss\Documents\Lab2---Functions\Lab3 - Function\Lab3 - Function\obj\Debug\Lab3 - Function.pdb
