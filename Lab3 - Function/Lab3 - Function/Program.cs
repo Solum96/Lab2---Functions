@@ -9,17 +9,16 @@ namespace Lab3___Function
 {
     class Program
     {
-
         static string startLocation;
         static double startLatitude;
         static double startLongitude;
         static string endLocation;
         static double endLatitude;
         static double endLongitude;
-        static string[] Places = new string[] { "Stockholm", "Göteborg", "Oslo", "Luleå", "Helsinki", "Berlin", "Paris" };
-        static double[] Latitudes = new double[] { 59.3261917, 57.7010496, 59.8939529, 65.5867395, 60.11021, 52.5069312, 48.859 };
-        static double[] Longitudes = new double[] { 17.7018773, 11.6136602, 10.6450348, 22.0422998, 24.7385057, 13.1445521, 2.2069765 };
-        static string[] Route = new string[] { "Helsinki", "Luleå", "Oslo", "Paris" };
+        static string[] places = new string[] { "Stockholm", "Göteborg", "Oslo", "Luleå", "Helsinki", "Berlin", "Paris" };
+        static double[] latitudes = new double[] { 59.3261917, 57.7010496, 59.8939529, 65.5867395, 60.11021, 52.5069312, 48.859 };
+        static double[] longitudes = new double[] { 17.7018773, 11.6136602, 10.6450348, 22.0422998, 24.7385057, 13.1445521, 2.2069765 };
+        static string[] route = new string[] { "Helsinki", "Luleå", "Oslo", "Paris" };
 
         static void Main(string[] args)
         {
@@ -44,7 +43,7 @@ namespace Lab3___Function
 
                         case 2:
                             Console.Clear();
-                            Console.WriteLine(FindRoute(Route));
+                            Console.WriteLine(GetDistanceKilometers(route));
                             break;
 
                         case 3:
@@ -75,12 +74,12 @@ namespace Lab3___Function
             
         }
 
-        private static double FindRoute(string[] Route)
+        private static double GetDistanceKilometers(string[] route) //bör vara en overload, parametrar skall vara i camelCase inte PacsalCase
         {
             double distance = 0;
-            for (int i = 0; i < Route.Length - 1; i++)
+            for (int i = 0; i < route.Length - 1; i++)
             {
-                distance += GetDistanceKilometers(Route[i], Route[i + 1]);
+                distance += GetDistanceKilometers(route[i], route[i + 1]);
             }
             return distance;
         }
@@ -140,14 +139,14 @@ namespace Lab3___Function
         {
             return GetDistanceKilometers
             (
-                Latitudes[Array.IndexOf(Places, startCity)],
-                Latitudes[Array.IndexOf(Places, endCity)],
-                Longitudes[Array.IndexOf(Places, startCity)],
-                Longitudes[Array.IndexOf(Places, endCity)]
+                latitudes[Array.IndexOf(places, startCity)],
+                latitudes[Array.IndexOf(places, endCity)],
+                longitudes[Array.IndexOf(places, startCity)],
+                longitudes[Array.IndexOf(places, endCity)]
             );
         }
 
-        private static double GetDistanceKilometers(double xAxis1, double xAxis2, double yAxis1, double yAxis2)
+        private static double GetDistanceKilometers(double xAxis1, double xAxis2, double yAxis1, double yAxis2) //1 och 2 är inte tydliga parameter namn, start och goal, first och second hade varit lämpligare
         {
            double distance = (2 * 6371) * Math.Asin(Math.Sqrt(Math.Pow(Math.Sin((Degrees2Radians(xAxis2) - Degrees2Radians(xAxis1)) / 2), 2) + //
                 Math.Cos(Degrees2Radians(xAxis1)) * Math.Cos(Degrees2Radians(xAxis2)) *                                                        // Calculates distance using Haversine Formula
@@ -163,15 +162,15 @@ namespace Lab3___Function
 
         private static void SetStartLocation(int menu)
         {
-            startLocation = Places[menu - 1];
-            startLatitude = Latitudes[menu - 1];
-            startLongitude = Longitudes[menu - 1];
+            startLocation = places[menu - 1];
+            startLatitude = latitudes[menu - 1];
+            startLongitude = longitudes[menu - 1];
         }
         private static void SetEndLocation(int menu)
         {
-            endLocation = Places[menu - 1];
-            endLatitude = Latitudes[menu - 1];
-            endLongitude = Longitudes[menu - 1];
+            endLocation = places[menu - 1];
+            endLatitude = latitudes[menu - 1];
+            endLongitude = longitudes[menu - 1];
         }
     }
 }
