@@ -53,7 +53,7 @@ namespace Lab3___Function
                 }
                 catch (ArgumentException e)
                 {
-                    Console.Clear();
+                    Console.Clear();    //Kommentar
                     Console.WriteLine(e.Message);
                 }
                 catch (FormatException)
