@@ -72,9 +72,9 @@ namespace Lab3___Function
 
         private static double GetDistanceKilometers(double xAxis1, double xAxis2, double yAxis1, double yAxis2)
         {
-           double distance = (2 * 6371) * Math.Asin(Math.Sqrt(Math.Pow(Math.Sin((Degrees2Radians(xAxis2) - Degrees2Radians(xAxis1)) / 2), 2) +
-                Math.Cos(Degrees2Radians(xAxis1)) * Math.Cos(Degrees2Radians(xAxis2)) *                
-                Math.Pow(Math.Sin((Degrees2Radians(yAxis2) - Degrees2Radians(yAxis1)) / 2), 2)));
+           double distance = (2 * 6371) * Math.Asin(Math.Sqrt(Math.Pow(Math.Sin((Degrees2Radians(xAxis2) - Degrees2Radians(xAxis1)) / 2), 2) + //
+                Math.Cos(Degrees2Radians(xAxis1)) * Math.Cos(Degrees2Radians(xAxis2)) *                                                        // Kommentar
+                Math.Pow(Math.Sin((Degrees2Radians(yAxis2) - Degrees2Radians(yAxis1)) / 2), 2)));                                              //
             return Math.Round(distance, 2);
         }
 
