@@ -1,5 +1,4 @@
-﻿// Nils Lundell och Sofia Lindgren
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab3___Function
 {
+    // Nils Lundell och Sofia Lindgren
     class Program
     {
         static string startLocation;
@@ -74,7 +74,7 @@ namespace Lab3___Function
             
         }
 
-        private static double GetDistanceKilometers(string[] route) //bör vara en overload, parametrar skall vara i camelCase inte PacsalCase
+        private static double GetDistanceKilometers(string[] route)
         {
             double distance = 0;
             for (int i = 0; i < route.Length - 1; i++)
@@ -146,7 +146,7 @@ namespace Lab3___Function
             );
         }
 
-        private static double GetDistanceKilometers(double xAxis1, double xAxis2, double yAxis1, double yAxis2) //1 och 2 är inte tydliga parameter namn, start och goal, first och second hade varit lämpligare
+        private static double GetDistanceKilometers(double xAxis1, double xAxis2, double yAxis1, double yAxis2)
         {
            double distance = (2 * 6371) * Math.Asin(Math.Sqrt(Math.Pow(Math.Sin((Degrees2Radians(xAxis2) - Degrees2Radians(xAxis1)) / 2), 2) + //
                 Math.Cos(Degrees2Radians(xAxis1)) * Math.Cos(Degrees2Radians(xAxis2)) *                                                        // Calculates distance using Haversine Formula
