@@ -15,7 +15,7 @@ namespace Lab3___Function
         static string endLocation;
         static double endLatitude;
         static double endLongitude;
-        static string[] Places = new string[] { "stockholm", "göteborg", "oslo", "luleå", "helsinki", "berlin", "paris" };
+        static string[] Places = new string[] { "Stockholm", "Göteborg", "Oslo", "Luleå", "Helsinki", "Berlin", "Paris" };
         static double[] Latitudes = new double[] { 59.3261917, 57.7010496, 59.8939529, 65.5867395, 60.11021, 52.5069312, 48.859 };
         static double[] Longitudes = new double[] { 17.7018773, 11.6136602, 10.6450348, 22.0422998, 24.7385057, 13.1445521, 2.2069765 };
 
@@ -36,7 +36,7 @@ namespace Lab3___Function
 
                     int menu = int.Parse(Console.ReadLine());
                     SetStartLocation(menu);
-                    if (menu < 0 && menu > 7) throw new ArgumentException("Du måste välja en siffra mellan 1 och 7");
+                    if (menu < 0 && menu > 7) throw new ArgumentException("Choose a number between 1 and 7");
 
                     Console.WriteLine("Select end location: ");
                     Console.WriteLine("[1] Stockholm");
@@ -48,7 +48,7 @@ namespace Lab3___Function
                     Console.WriteLine("[7] Paris");
                     menu = int.Parse(Console.ReadLine());
                     SetEndLocation(menu);
-                    if (menu < 0 && menu > 7) throw new ArgumentException("Du måste välja en siffra mellan 1 och 7");
+                    if (menu < 0 && menu > 7) throw new ArgumentException("Choose a number between 1 and 7");
                     break;
                 }
                 catch (ArgumentException e)
@@ -63,10 +63,10 @@ namespace Lab3___Function
                 }
             }
             Console.Clear();
-            Console.WriteLine("Tryck på valrfi knapp för att mäta avståndet.");
+            Console.WriteLine("Press any button to continue. . .");
             Console.ReadKey();
             double distance = GetDistanceKilometers(startLatitude, endLatitude, startLongitude, endLongitude);
-            Console.WriteLine(distance);
+            Console.WriteLine($"Distance between {startLocation} and {endLocation} is {distance}km");
             Console.ReadKey();
         }
 
